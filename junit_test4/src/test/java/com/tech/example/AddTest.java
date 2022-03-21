@@ -8,6 +8,7 @@ import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
 import java.io.PrintStream;
+import java.util.ArrayList;
 import java.util.Random;
 
 import static org.junit.Assert.*;
@@ -52,8 +53,27 @@ public class AddTest {
 
     @Test
     public void genCode(){
-        Random random = Mockito.mock(java.util.Random.class);
-        
+        class MyRandom extends Random{
+            private int rand = 0;
+
+            @Override
+            public int nextInt(int bound){
+                this.rand++;
+                return this.rand;
+            }
+
+        }
+
+        MyRandom random = new MyRandom();
+        Add add = new Add();
+        ArrayList<Integer> expectedCode = new ArrayList<>();
+        expectedCode.add(2);
+        expectedCode.add(3);
+        expectedCode.add(4);
+        expectedCode.add(5);
+        ArrayList<Integer> actualCode = add.genCode(random);
+        assertEquals(expectedCode,actualCode);
+        assertEquals(4,actualCode.size());
 
     }
 }

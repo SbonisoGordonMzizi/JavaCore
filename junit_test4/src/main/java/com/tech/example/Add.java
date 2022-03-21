@@ -6,10 +6,12 @@ import java.util.Scanner;
 
 public class Add {
     public int addTwoNumbers(int number1, int number2){
+
         return number1 + number2;
     }
 
     public void HelloWord(){
+
         System.out.println("HELLO WORLD");
     }
 
@@ -19,9 +21,8 @@ public class Add {
         return name;
     }
 
-    public ArrayList<Integer> genCode(){
+    public ArrayList<Integer> genCode(Random random){
         ArrayList<Integer> code = new ArrayList<>();
-        Random random = new Random(); // collaborator 1
         while(code.size() != 4){
             int num = random.nextInt(8-1) + 1;
             if(code.contains(num) == false) {
@@ -32,7 +33,8 @@ public class Add {
     }
 
     public static void main(String[] args) {
+        Random random = new Random();
         Add add = new Add();
-        System.out.println(add.genCode());
+        System.out.println(add.genCode(random));
     }
 }
