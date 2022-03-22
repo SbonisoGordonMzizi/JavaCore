@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="4" failures="0" name="com.tech.example.AddTest" time="0.017" errors="0" skipped="0">
+<testsuite tests="4" failures="0" name="com.tech.example.AddTest" time="0.428" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="11.0.14+8-LTS-263"/>
@@ -62,7 +62,7 @@
     <property name="sun.cpu.isalist" value=""/>
   </properties>
   <testcase classname="com.tech.example.AddTest" name="HelloWord" time="0.003"/>
-  <testcase classname="com.tech.example.AddTest" name="genCode" time="0"/>
-  <testcase classname="com.tech.example.AddTest" name="Ask" time="0.013"/>
-  <testcase classname="com.tech.example.AddTest" name="addTwoNumbers2and2" time="0.001"/>
+  <testcase classname="com.tech.example.AddTest" name="genCodeTest" time="0.41"/>
+  <testcase classname="com.tech.example.AddTest" name="Ask" time="0.011"/>
+  <testcase classname="com.tech.example.AddTest" name="addTwoNumbers2and2" time="0.004"/>
 </testsuite>
